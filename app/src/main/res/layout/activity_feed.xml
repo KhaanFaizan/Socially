@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".FeedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Header -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:background="@android:color/white"
+            android:elevation="2dp">
+
+            <!-- Camera Icon -->
+            <ImageView
+                android:id="@+id/cameraIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/camera"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Socially Title -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Socially"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <!-- Right Icons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/reelsIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/reels"
+                    android:layout_marginEnd="12dp" />
+
+                <ImageView
+                    android:id="@+id/messagesIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/share" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Stories Section -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp">
+
+                <!-- Your Story -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:cardCornerRadius="33dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            app:cardCornerRadius="30dp"
+                            app:cardElevation="0dp"
+                            android:layout_gravity="center"
+                            app:cardBackgroundColor="@android:color/white">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/shutterstock_100407100"
+                                android:scaleType="centerCrop" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Story"
+                        android:textSize="11sp"
+                        android:textColor="@android:color/black"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                </LinearLayout>
+
+                <!-- Story 1 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:cardCornerRadius="33dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            app:cardCornerRadius="30dp"
+                            app:cardElevation="0dp"
+                            android:layout_gravity="center"
+                            app:cardBackgroundColor="@android:color/white">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/shutterstock_1011776404"
+                                android:scaleType="centerCrop" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="karennne"
+                        android:textSize="11sp"
+                        android:textColor="@android:color/black"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                </LinearLayout>
+
+                <!-- Story 2 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:cardCornerRadius="33dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            app:cardCornerRadius="30dp"
+                            app:cardElevation="0dp"
+                            android:layout_gravity="center"
+                            app:cardBackgroundColor="@android:color/white">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/shutterstock_1033038292"
+                                android:scaleType="centerCrop" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="zackjohn"
+                        android:textSize="11sp"
+                        android:textColor="@android:color/black"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                </LinearLayout>
+
+                <!-- Story 3 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:cardCornerRadius="33dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            app:cardCornerRadius="30dp"
+                            app:cardElevation="0dp"
+                            android:layout_gravity="center"
+                            app:cardBackgroundColor="@android:color/white">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/shutterstock_1068919502"
+                                android:scaleType="centerCrop" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kieron_d"
+                        android:textSize="11sp"
+                        android:textColor="@android:color/black"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                </LinearLayout>
+
+                <!-- Story 4 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        app:cardCornerRadius="33dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginBottom="4dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            app:cardCornerRadius="30dp"
+                            app:cardElevation="0dp"
+                            android:layout_gravity="center"
+                            app:cardBackgroundColor="@android:color/white">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/shutterstock_1152745409"
+                                android:scaleType="centerCrop" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="craig_"
+                        android:textSize="11sp"
+                        android:textColor="@android:color/black"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- Main Post -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <!-- Post Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="10dp">
+
+                <!-- Profile Picture -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginEnd="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/shutterstock_1163329165"
+                        android:scaleType="centerCrop" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Username and Location -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="joshua_l"
+                            android:textSize="13sp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/star"
+                            android:layout_marginStart="4dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tokyo, Japan"
+                        android:textSize="11sp"
+                        android:textColor="#808080" />
+
+                </LinearLayout>
+
+                <!-- Options Menu -->
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/options" />
+
+            </LinearLayout>
+
+            <!-- Post Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@drawable/shutterstock_1195609657"
+                android:scaleType="centerCrop" />
+
+            <!-- Post Actions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="10dp">
+
+                <!-- Left Actions -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/like"
+                        android:layout_marginEnd="14dp" />
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/comment"
+                        android:layout_marginEnd="14dp" />
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/share" />
+
+                </LinearLayout>
+
+                <!-- Page Indicators -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="@android:color/black"
+                        android:layout_marginEnd="4dp" />
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginEnd="4dp" />
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:background="#E0E0E0" />
+
+                </LinearLayout>
+
+                <!-- Save Icon -->
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/save" />
+
+            </LinearLayout>
+
+            <!-- Likes and Caption -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Liked by craig_love and 44,686 others"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="joshua_l The game in Japan was amazing and I want to share some photos"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Bottom Navigation -->
+        <LinearLayout
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            android:paddingHorizontal="20dp">
+
+            <!-- Home -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="40dp">
+
+                <ImageView
+                    android:id="@+id/homeIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/homefilled" />
+
+                <!-- Red line for active tab -->
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:background="#FF8B4513"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Search -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="40dp">
+
+                <ImageView
+                    android:id="@+id/searchBottomIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/search" />
+
+                <!-- Inactive line (hidden) -->
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Add Post -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="40dp">
+
+                <ImageView
+                    android:id="@+id/addPostIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/createpost" />
+
+                <!-- Inactive line (hidden) -->
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Activity -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="40dp">
+
+                <ImageView
+                    android:id="@+id/activityIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/like" />
+
+                <!-- Inactive line (hidden) -->
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Profile -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    app:cardCornerRadius="14dp">
+
+                    <ImageView
+                        android:id="@+id/profileIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/shutterstock_1163329165"
+                        android:scaleType="centerCrop" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Inactive line (hidden) -->
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Bottom horizontal line -->
+        <View
+            android:layout_width="80dp"
+            android:layout_height="4dp"
+            android:background="#FF8B4513"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

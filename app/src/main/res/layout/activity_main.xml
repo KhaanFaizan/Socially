@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Original logo image -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/socially_logo"
+        android:contentDescription="@string/logo_desc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="80dp" />
+
+    <!-- 'from' text -->
+    <TextView
+        android:id="@+id/fromText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from_text"
+        android:textSize="16sp"
+        android:textColor="#FF8B4513"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@id/smdText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 'SMD' text -->
+    <TextView
+        android:id="@+id/smdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/smd_text"
+        android:textSize="24sp"
+        android:textColor="#FF8B4513"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom horizontal line -->
+    <View
+        android:id="@+id/bottomLine"
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:background="#FF8B4513"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
