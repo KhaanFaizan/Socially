@@ -197,6 +197,7 @@
 
             <!-- Result 1 - Account -->
             <LinearLayout
+                android:id="@+id/firstSearchResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

@@ -60,10 +60,12 @@ class SearchResultsActivity : AppCompatActivity() {
         val clearButton = findViewById<TextView>(R.id.clearButton)
         val homeIcon = findViewById<ImageView>(R.id.homeIcon)
         val searchIcon = findViewById<ImageView>(R.id.searchBottomIcon)
+        val firstSearchResult = findViewById<LinearLayout>(R.id.firstSearchResult)
         
         Log.d("SearchResultsActivity", "clearButton found: ${clearButton != null}")
         Log.d("SearchResultsActivity", "homeIcon found: ${homeIcon != null}")
         Log.d("SearchResultsActivity", "searchIcon found: ${searchIcon != null}")
+        Log.d("SearchResultsActivity", "firstSearchResult found: ${firstSearchResult != null}")
     }
 
     private fun setupClickListeners() {
@@ -144,6 +146,25 @@ class SearchResultsActivity : AppCompatActivity() {
         val profileIcon: ImageView = findViewById(R.id.profileIcon)
         profileIcon.setOnClickListener {
             Toast.makeText(this, "Profile feature coming soon!", Toast.LENGTH_SHORT).show()
+        }
+
+        // First search result - navigate to DM
+        val firstSearchResult: LinearLayout = findViewById(R.id.firstSearchResult)
+        if (firstSearchResult != null) {
+            firstSearchResult.setOnClickListener {
+                Toast.makeText(this, "Opening DM with ahmad_khan", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, DirectMessageActivity::class.java)
+                    startActivity(intent)
+                    Log.d("SearchResultsActivity", "Navigating to DirectMessageActivity")
+                } catch (e: Exception) {
+                    Log.e("SearchResultsActivity", "Error navigating to DirectMessageActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening DM: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+        } else {
+            Log.e("SearchResultsActivity", "First search result not found!")
+            Toast.makeText(this, "First search result not found!", Toast.LENGTH_SHORT).show()
         }
     }
 }

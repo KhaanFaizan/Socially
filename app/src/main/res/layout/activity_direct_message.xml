@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".DirectMessageActivity">
+
+    <!-- Top Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="@android:color/white"
+        android:elevation="2dp">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/chevronleft"
+            android:layout_marginRight="16dp" />
+
+        <!-- Contact Profile Picture -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            android:layout_marginRight="12dp"
+            app:cardBackgroundColor="#FF8B4513">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="AK"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Contact Name -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ahmad_khan"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <!-- Video Call Icon -->
+        <ImageView
+            android:id="@+id/videoCallIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/video"
+            android:layout_marginRight="16dp" />
+
+        <!-- Info Icon -->
+        <ImageView
+            android:id="@+id/infoIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/info"
+            android:background="@drawable/circle_background"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+    <!-- Main Chat Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="@android:color/white"
+        android:paddingVertical="20dp">
+
+        <!-- Timestamp -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="4:49 PM"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Message Bubble -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/message_bubble_sent"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                android:textSize="16sp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Message Input Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <!-- Camera Icon -->
+        <ImageView
+            android:id="@+id/cameraIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/camera"
+            android:layout_marginRight="12dp" />
+
+        <!-- Message Input Field -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/message_input_background"
+            android:paddingHorizontal="16dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/messageInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Message..."
+                android:textSize="16sp"
+                android:textColor="#999999"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <!-- Action Icons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Microphone Icon -->
+            <ImageView
+                android:id="@+id/micIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mic"
+                android:layout_marginRight="12dp" />
+
+            <!-- Gallery Icon -->
+            <ImageView
+                android:id="@+id/galleryIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/gallery"
+                android:layout_marginRight="12dp" />
+
+            <!-- Emoji Icon -->
+            <ImageView
+                android:id="@+id/emojiIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/emoji" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom horizontal line -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="4dp"
+        android:background="#FF8B4513"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>
