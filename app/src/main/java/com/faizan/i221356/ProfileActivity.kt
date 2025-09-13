@@ -103,7 +103,16 @@ class ProfileActivity : AppCompatActivity() {
         val newHighlight: LinearLayout = findViewById(R.id.newHighlight)
         if (newHighlight != null) {
             newHighlight.setOnClickListener {
-                Toast.makeText(this, "Create new story highlight!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Opening New highlights!", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, HighlightActivity::class.java)
+                    intent.putExtra("highlight_type", "New")
+                    startActivity(intent)
+                    Log.d("ProfileActivity", "Navigating to HighlightActivity for New")
+                } catch (e: Exception) {
+                    Log.e("ProfileActivity", "Error navigating to HighlightActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening highlights: ${e.message}", Toast.LENGTH_LONG).show()
+                }
             }
         } else {
             Log.e("ProfileActivity", "New highlight not found!")
@@ -113,7 +122,16 @@ class ProfileActivity : AppCompatActivity() {
         val friendsHighlight: LinearLayout = findViewById(R.id.friendsHighlight)
         if (friendsHighlight != null) {
             friendsHighlight.setOnClickListener {
-                Toast.makeText(this, "Friends stories!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Opening Friends highlights!", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, HighlightActivity::class.java)
+                    intent.putExtra("highlight_type", "Friends")
+                    startActivity(intent)
+                    Log.d("ProfileActivity", "Navigating to HighlightActivity for Friends")
+                } catch (e: Exception) {
+                    Log.e("ProfileActivity", "Error navigating to HighlightActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening highlights: ${e.message}", Toast.LENGTH_LONG).show()
+                }
             }
         } else {
             Log.e("ProfileActivity", "Friends highlight not found!")
@@ -123,7 +141,16 @@ class ProfileActivity : AppCompatActivity() {
         val sportHighlight: LinearLayout = findViewById(R.id.sportHighlight)
         if (sportHighlight != null) {
             sportHighlight.setOnClickListener {
-                Toast.makeText(this, "Sport stories!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Opening Sport highlights!", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, HighlightActivity::class.java)
+                    intent.putExtra("highlight_type", "Sport")
+                    startActivity(intent)
+                    Log.d("ProfileActivity", "Navigating to HighlightActivity for Sport")
+                } catch (e: Exception) {
+                    Log.e("ProfileActivity", "Error navigating to HighlightActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening highlights: ${e.message}", Toast.LENGTH_LONG).show()
+                }
             }
         } else {
             Log.e("ProfileActivity", "Sport highlight not found!")
@@ -133,7 +160,16 @@ class ProfileActivity : AppCompatActivity() {
         val designHighlight: LinearLayout = findViewById(R.id.designHighlight)
         if (designHighlight != null) {
             designHighlight.setOnClickListener {
-                Toast.makeText(this, "Design stories!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Opening Design highlights!", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, HighlightActivity::class.java)
+                    intent.putExtra("highlight_type", "Design")
+                    startActivity(intent)
+                    Log.d("ProfileActivity", "Navigating to HighlightActivity for Design")
+                } catch (e: Exception) {
+                    Log.e("ProfileActivity", "Error navigating to HighlightActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening highlights: ${e.message}", Toast.LENGTH_LONG).show()
+                }
             }
         } else {
             Log.e("ProfileActivity", "Design highlight not found!")
