@@ -70,10 +70,19 @@ class DirectMessageActivity : AppCompatActivity() {
         val videoCallIcon: ImageView = findViewById(R.id.videoCallIcon)
         if (videoCallIcon != null) {
             videoCallIcon.setOnClickListener {
-                Toast.makeText(this, "Video call feature coming soon!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Starting video call with Mother", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, VideoCallActivity::class.java)
+                    startActivity(intent)
+                    Log.d("DirectMessageActivity", "Navigating to VideoCallActivity")
+                } catch (e: Exception) {
+                    Log.e("DirectMessageActivity", "Error navigating to VideoCallActivity: ${e.message}")
+                    Toast.makeText(this, "Error starting video call: ${e.message}", Toast.LENGTH_LONG).show()
+                }
             }
         } else {
             Log.e("DirectMessageActivity", "Video call icon not found!")
+            Toast.makeText(this, "Video call icon not found!", Toast.LENGTH_SHORT).show()
         }
 
         // Info icon
