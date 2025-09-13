@@ -152,5 +152,24 @@ class MessagesActivity : AppCompatActivity() {
         } else {
             Log.e("MessagesActivity", "Message item 3 not found!")
         }
+
+        // Profile icon
+        val profileIcon: ImageView = findViewById(R.id.profileIcon)
+        if (profileIcon != null) {
+            profileIcon.setOnClickListener {
+                Toast.makeText(this, "Profile icon clicked!", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
+                    Log.d("MessagesActivity", "Navigating to ProfileActivity")
+                } catch (e: Exception) {
+                    Log.e("MessagesActivity", "Error navigating to ProfileActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening profile page: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+        } else {
+            Log.e("MessagesActivity", "Profile icon not found!")
+            Toast.makeText(this, "Profile icon not found!", Toast.LENGTH_SHORT).show()
+        }
     }
 }
