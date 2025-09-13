@@ -44,10 +44,16 @@ class MessagesActivity : AppCompatActivity() {
         val backArrow = findViewById<ImageView>(R.id.backArrow)
         val plusIcon = findViewById<ImageView>(R.id.plusIcon)
         val cameraButton = findViewById<LinearLayout>(R.id.cameraButton)
+        val messageItem1 = findViewById<LinearLayout>(R.id.messageItem1)
+        val messageItem2 = findViewById<LinearLayout>(R.id.messageItem2)
+        val messageItem3 = findViewById<LinearLayout>(R.id.messageItem3)
         
         Log.d("MessagesActivity", "backArrow found: ${backArrow != null}")
         Log.d("MessagesActivity", "plusIcon found: ${plusIcon != null}")
         Log.d("MessagesActivity", "cameraButton found: ${cameraButton != null}")
+        Log.d("MessagesActivity", "messageItem1 found: ${messageItem1 != null}")
+        Log.d("MessagesActivity", "messageItem2 found: ${messageItem2 != null}")
+        Log.d("MessagesActivity", "messageItem3 found: ${messageItem3 != null}")
     }
 
     private fun setupClickListeners() {
@@ -91,6 +97,60 @@ class MessagesActivity : AppCompatActivity() {
         } else {
             Log.e("MessagesActivity", "Camera button not found!")
             Toast.makeText(this, "Camera button not found!", Toast.LENGTH_SHORT).show()
+        }
+
+        // Message Item 1 - ali_ahmed
+        val messageItem1: LinearLayout = findViewById(R.id.messageItem1)
+        if (messageItem1 != null) {
+            messageItem1.setOnClickListener {
+                Toast.makeText(this, "Opening chat with ali_ahmed", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, DirectMessageActivity::class.java)
+                    startActivity(intent)
+                    Log.d("MessagesActivity", "Navigating to DirectMessageActivity for ali_ahmed")
+                } catch (e: Exception) {
+                    Log.e("MessagesActivity", "Error navigating to DirectMessageActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening chat: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+        } else {
+            Log.e("MessagesActivity", "Message item 1 not found!")
+        }
+
+        // Message Item 2 - sarah_khan
+        val messageItem2: LinearLayout = findViewById(R.id.messageItem2)
+        if (messageItem2 != null) {
+            messageItem2.setOnClickListener {
+                Toast.makeText(this, "Opening chat with sarah_khan", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, DirectMessageActivity::class.java)
+                    startActivity(intent)
+                    Log.d("MessagesActivity", "Navigating to DirectMessageActivity for sarah_khan")
+                } catch (e: Exception) {
+                    Log.e("MessagesActivity", "Error navigating to DirectMessageActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening chat: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+        } else {
+            Log.e("MessagesActivity", "Message item 2 not found!")
+        }
+
+        // Message Item 3 - mike_wilson
+        val messageItem3: LinearLayout = findViewById(R.id.messageItem3)
+        if (messageItem3 != null) {
+            messageItem3.setOnClickListener {
+                Toast.makeText(this, "Opening chat with mike_wilson", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, DirectMessageActivity::class.java)
+                    startActivity(intent)
+                    Log.d("MessagesActivity", "Navigating to DirectMessageActivity for mike_wilson")
+                } catch (e: Exception) {
+                    Log.e("MessagesActivity", "Error navigating to DirectMessageActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening chat: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+        } else {
+            Log.e("MessagesActivity", "Message item 3 not found!")
         }
     }
 }

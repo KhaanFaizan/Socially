@@ -86,8 +86,21 @@ class FeedActivity : AppCompatActivity() {
         }
 
         val activityIcon: ImageView = findViewById(R.id.activityIcon)
-        activityIcon.setOnClickListener {
-            Toast.makeText(this, "Activity feature coming soon!", Toast.LENGTH_SHORT).show()
+        if (activityIcon != null) {
+            activityIcon.setOnClickListener {
+                Toast.makeText(this, "Activity icon clicked!", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, ActivityNotificationActivity::class.java)
+                    startActivity(intent)
+                    Log.d("FeedActivity", "Navigating to ActivityNotificationActivity")
+                } catch (e: Exception) {
+                    Log.e("FeedActivity", "Error navigating to ActivityNotificationActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening activity page: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            }
+        } else {
+            Log.e("FeedActivity", "Activity icon not found!")
+            Toast.makeText(this, "Activity icon not found!", Toast.LENGTH_SHORT).show()
         }
 
         val profileIcon: ImageView = findViewById(R.id.profileIcon)

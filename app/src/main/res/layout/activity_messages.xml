@@ -116,6 +116,7 @@
 
             <!-- Message 1 -->
             <LinearLayout
+                android:id="@+id/messageItem1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -191,6 +192,7 @@
 
             <!-- Message 2 -->
             <LinearLayout
+                android:id="@+id/messageItem2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -266,6 +268,7 @@
 
             <!-- Message 3 -->
             <LinearLayout
+                android:id="@+id/messageItem3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

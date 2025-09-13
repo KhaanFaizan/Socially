@@ -148,19 +148,11 @@ class SearchResultsActivity : AppCompatActivity() {
             Toast.makeText(this, "Profile feature coming soon!", Toast.LENGTH_SHORT).show()
         }
 
-        // First search result - navigate to DM
+        // First search result - no navigation (search results only)
         val firstSearchResult: LinearLayout = findViewById(R.id.firstSearchResult)
         if (firstSearchResult != null) {
             firstSearchResult.setOnClickListener {
-                Toast.makeText(this, "Opening DM with ahmad_khan", Toast.LENGTH_SHORT).show()
-                try {
-                    val intent = Intent(this, DirectMessageActivity::class.java)
-                    startActivity(intent)
-                    Log.d("SearchResultsActivity", "Navigating to DirectMessageActivity")
-                } catch (e: Exception) {
-                    Log.e("SearchResultsActivity", "Error navigating to DirectMessageActivity: ${e.message}")
-                    Toast.makeText(this, "Error opening DM: ${e.message}", Toast.LENGTH_LONG).show()
-                }
+                Toast.makeText(this, "Search result clicked - no navigation", Toast.LENGTH_SHORT).show()
             }
         } else {
             Log.e("SearchResultsActivity", "First search result not found!")

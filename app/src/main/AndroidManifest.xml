@@ -47,6 +47,12 @@
         <activity
             android:name=".VideoCallActivity"
             android:exported="false" />
+        <activity
+            android:name=".ActivityNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".YouNotificationActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
