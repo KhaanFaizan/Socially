@@ -82,7 +82,15 @@ class ProfileActivity : AppCompatActivity() {
         val editProfileButton: TextView = findViewById(R.id.editProfileButton)
         if (editProfileButton != null) {
             editProfileButton.setOnClickListener {
-                Toast.makeText(this, "Edit Profile feature coming soon!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Opening Edit Profile!", Toast.LENGTH_SHORT).show()
+                try {
+                    val intent = Intent(this, EditProfileActivity::class.java)
+                    startActivity(intent)
+                    Log.d("ProfileActivity", "Navigating to EditProfileActivity")
+                } catch (e: Exception) {
+                    Log.e("ProfileActivity", "Error navigating to EditProfileActivity: ${e.message}")
+                    Toast.makeText(this, "Error opening edit profile: ${e.message}", Toast.LENGTH_LONG).show()
+                }
             }
         } else {
             Log.e("ProfileActivity", "Edit Profile button not found!")

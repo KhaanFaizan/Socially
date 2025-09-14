@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".EditProfileActivity">
+
+    <!-- Top Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="@android:color/white"
+        android:elevation="2dp">
+
+        <!-- Cancel Button -->
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit Profile"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Done Button -->
+        <TextView
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="16sp"
+            android:textColor="#FF8B4513"
+            android:textStyle="bold"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="24dp">
+
+            <!-- Profile Picture Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="32dp">
+
+                <!-- Profile Picture -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardCornerRadius="40dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/shutterstock_1163329165"
+                        android:scaleType="centerCrop" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Change Profile Photo -->
+                <TextView
+                    android:id="@+id/changePhotoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Profile Photo"
+                    android:textSize="16sp"
+                    android:textColor="#FF8B4513"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+            <!-- Profile Information Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <!-- Name Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jacob West"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPersonName"
+                        android:paddingStart="16dp" />
+
+                </LinearLayout>
+
+                <!-- Username Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Username"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/usernameEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="jacob_w"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:background="@android:color/transparent"
+                        android:inputType="text"
+                        android:paddingStart="16dp" />
+
+                </LinearLayout>
+
+                <!-- Website Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Website"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/websiteEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Website"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#999999"
+                        android:background="@android:color/transparent"
+                        android:inputType="textUri"
+                        android:paddingStart="16dp" />
+
+                </LinearLayout>
+
+                <!-- Bio Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bio"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <EditText
+                        android:id="@+id/bioEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Digital goodies designer @pixsellz\nEverything is designed."
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:background="@android:color/transparent"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:paddingStart="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Switch to Professional Account -->
+            <TextView
+                android:id="@+id/switchAccountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch to Professional Account"
+                android:textSize="16sp"
+                android:textColor="#FF8B4513"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Private Information Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Private Information"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Email Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="jacob.west@gmail.com"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:background="@android:color/transparent"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="16dp" />
+
+                </LinearLayout>
+
+                <!-- Phone Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Phone"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/phoneEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+1 202 555 0147"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:background="@android:color/transparent"
+                        android:inputType="phone"
+                        android:paddingStart="16dp" />
+
+                </LinearLayout>
+
+                <!-- Gender Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/genderEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Male"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:background="@android:color/transparent"
+                        android:inputType="text"
+                        android:paddingStart="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="60dp"
+        android:paddingBottom="8dp">
+
+        <!-- Terracotta line (centered, half width) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FF8B4513" />
+
+    </LinearLayout>
+
+</LinearLayout>
