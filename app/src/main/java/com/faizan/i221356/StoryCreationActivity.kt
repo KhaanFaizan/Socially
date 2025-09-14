@@ -101,8 +101,18 @@ class StoryCreationActivity : AppCompatActivity() {
         }
         
         shareButton.setOnClickListener {
-            Toast.makeText(this, "Share Story", Toast.LENGTH_SHORT).show()
-            Log.d("StoryCreationActivity", "Share button clicked")
+            Toast.makeText(this, "Sharing story...", Toast.LENGTH_SHORT).show()
+            try {
+                val intent = Intent(this, SharedStoryActivity::class.java)
+                intent.putExtra("username", "gursky.studio")
+                intent.putExtra("timeAgo", "now")
+                intent.putExtra("storyImage", R.drawable.shutterstock_100407100)
+                startActivity(intent)
+                Log.d("StoryCreationActivity", "Navigating to SharedStoryActivity")
+            } catch (e: Exception) {
+                Log.e("StoryCreationActivity", "Error navigating to SharedStoryActivity: ${e.message}")
+                Toast.makeText(this, "Error sharing story: ${e.message}", Toast.LENGTH_LONG).show()
+            }
         }
     }
     

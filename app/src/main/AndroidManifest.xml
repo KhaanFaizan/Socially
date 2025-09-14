@@ -74,6 +74,9 @@
         <activity
             android:name=".StoryCreationActivity"
             android:exported="false" />
+        <activity
+            android:name=".SharedStoryActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
