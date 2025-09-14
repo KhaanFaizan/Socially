@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 
 class FeedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,6 +81,9 @@ class FeedActivity : AppCompatActivity() {
 
         // Story click listeners
         setupStoryClickListeners()
+
+        // Post profile click listeners
+        setupPostProfileClickListeners()
 
         // Bottom navigation items
         val homeIcon: ImageView = findViewById(R.id.homeIcon)
@@ -158,19 +163,87 @@ class FeedActivity : AppCompatActivity() {
         // Story 1 - karennne
         val story1Layout: LinearLayout = findViewById(R.id.story1Layout)
         story1Layout.setOnClickListener {
-            openStoryViewer("karennne", "2h", R.drawable.shutterstock_1011776404)
+            openUserProfile(
+                "karennne", 
+                "Karen Smith", 
+                "Photographer & Travel Blogger\nCapturing moments around the world ✨", 
+                "karennne.com", 
+                89, 
+                12500, 
+                234
+            )
         }
 
         // Story 2 - zackjohn
         val story2Layout: LinearLayout = findViewById(R.id.story2Layout)
         story2Layout.setOnClickListener {
-            openStoryViewer("zackjohn", "4h", R.drawable.shutterstock_1033038292)
+            openUserProfile(
+                "zackjohn", 
+                "Zack Johnson", 
+                "Fitness Enthusiast 💪\nLiving life to the fullest", 
+                "zackjohn.fit", 
+                156, 
+                8900, 
+                445
+            )
         }
 
         // Story 3 - kieron_d
         val story3Layout: LinearLayout = findViewById(R.id.story3Layout)
         story3Layout.setOnClickListener {
-            openStoryViewer("kieron_d", "6h", R.drawable.shutterstock_1068919502)
+            openUserProfile(
+                "kieron_d", 
+                "Kieron Davis", 
+                "Artist & Designer 🎨\nCreating beautiful things", 
+                "kieron.design", 
+                203, 
+                15600, 
+                678
+            )
+        }
+    }
+
+    private fun setupPostProfileClickListeners() {
+        // Post profile image
+        val postProfileImage: CardView = findViewById(R.id.postProfileImage)
+        postProfileImage.setOnClickListener {
+            openUserProfile(
+                "joshua_l",
+                "Joshua Lee",
+                "Photographer & Traveler 📸\nExploring the world one photo at a time\nTokyo • New York • London",
+                "joshua-lee.com",
+                234,
+                45600,
+                892
+            )
+        }
+
+        // Post profile info (username and location)
+        val postProfileInfo: LinearLayout = findViewById(R.id.postProfileInfo)
+        postProfileInfo.setOnClickListener {
+            openUserProfile(
+                "joshua_l",
+                "Joshua Lee",
+                "Photographer & Traveler 📸\nExploring the world one photo at a time\nTokyo • New York • London",
+                "joshua-lee.com",
+                234,
+                45600,
+                892
+            )
+        }
+
+        // Post username
+        val postUsername: TextView = findViewById(R.id.postUsername)
+        postUsername.setOnClickListener {
+            openUserProfile(
+                "joshua_l",
+                "Joshua Lee",
+                "Photographer & Traveler 📸\nExploring the world one photo at a time\nTokyo • New York • London",
+                "joshua-lee.com",
+                234,
+                45600,
+                892
+            )
         }
     }
 
@@ -186,6 +259,25 @@ class FeedActivity : AppCompatActivity() {
         } catch (e: Exception) {
             Log.e("FeedActivity", "Error navigating to StoryViewerActivity: ${e.message}")
             Toast.makeText(this, "Error opening story: ${e.message}", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun openUserProfile(username: String, fullName: String, bio: String, website: String, postsCount: Int, followersCount: Int, followingCount: Int) {
+        Toast.makeText(this, "Opening profile for $username", Toast.LENGTH_SHORT).show()
+        try {
+            val intent = Intent(this, UserProfileActivity::class.java)
+            intent.putExtra("username", username)
+            intent.putExtra("fullName", fullName)
+            intent.putExtra("bio", bio)
+            intent.putExtra("website", website)
+            intent.putExtra("postsCount", postsCount)
+            intent.putExtra("followersCount", followersCount)
+            intent.putExtra("followingCount", followingCount)
+            startActivity(intent)
+            Log.d("FeedActivity", "Navigating to UserProfileActivity for $username")
+        } catch (e: Exception) {
+            Log.e("FeedActivity", "Error navigating to UserProfileActivity: ${e.message}")
+            Toast.makeText(this, "Error opening profile: ${e.message}", Toast.LENGTH_LONG).show()
         }
     }
 }
