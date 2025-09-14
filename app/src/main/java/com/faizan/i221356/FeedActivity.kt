@@ -82,7 +82,15 @@ class FeedActivity : AppCompatActivity() {
 
         val addPostIcon: ImageView = findViewById(R.id.addPostIcon)
         addPostIcon.setOnClickListener {
-            Toast.makeText(this, "Create post feature coming soon!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Opening upload content!", Toast.LENGTH_SHORT).show()
+            try {
+                val intent = Intent(this, UploadContentActivity::class.java)
+                startActivity(intent)
+                Log.d("FeedActivity", "Navigating to UploadContentActivity")
+            } catch (e: Exception) {
+                Log.e("FeedActivity", "Error navigating to UploadContentActivity: ${e.message}")
+                Toast.makeText(this, "Error opening upload page: ${e.message}", Toast.LENGTH_LONG).show()
+            }
         }
 
         val activityIcon: ImageView = findViewById(R.id.activityIcon)
