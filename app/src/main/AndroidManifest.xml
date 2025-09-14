@@ -71,6 +71,9 @@
         <activity
             android:name=".StoryViewerActivity"
             android:exported="false" />
+        <activity
+            android:name=".StoryCreationActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

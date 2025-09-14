@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Story Image -->
+    <ImageView
+        android:id="@+id/storyImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/shutterstock_100407100"
+        android:scaleType="centerCrop" />
+
+    <!-- Top Overlay with Editing Tools -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/top_overlay_background"
+        android:paddingTop="16dp">
+
+        <!-- Close Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:gravity="start">
+
+            <ImageView
+                android:id="@+id/closeButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/close"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+        <!-- Editing Tools Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:gravity="end">
+
+            <!-- Sticker Button -->
+            <ImageView
+                android:id="@+id/stickerButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/sticker"
+                android:background="@drawable/circular_button_background"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Text Button -->
+            <ImageView
+                android:id="@+id/textButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/text_icon"
+                android:background="@drawable/circular_button_background"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Filter Button -->
+            <ImageView
+                android:id="@+id/filterButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/filter"
+                android:background="@drawable/circular_button_background"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Music Button -->
+            <ImageView
+                android:id="@+id/musicButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/music"
+                android:background="@drawable/circular_button_background"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Magic Button -->
+            <ImageView
+                android:id="@+id/magicButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/magic"
+                android:background="@drawable/circular_button_background"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- More Options -->
+            <ImageView
+                android:id="@+id/moreOptionsButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/more_vertical"
+                android:background="@drawable/circular_button_background"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Overlay with Sharing Options -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@drawable/bottom_overlay_background"
+        android:paddingBottom="16dp">
+
+        <!-- Sharing Options Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:gravity="center_vertical">
+
+            <!-- Your Stories Button -->
+            <LinearLayout
+                android:id="@+id/yourStoriesButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/profile_placeholder"
+                    android:background="@drawable/profile_circle_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your stories"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- Close Friends Button -->
+            <LinearLayout
+                android:id="@+id/closeFriendsButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/close_friends_icon"
+                    android:background="@drawable/close_friends_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close Friends"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- Share Button -->
+            <ImageView
+                android:id="@+id/shareButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/arrow_right"
+                android:background="@drawable/share_button_background"
+                android:padding="12dp" />
+
+        </LinearLayout>
+
+        <!-- Home Indicator -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF6B6B"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

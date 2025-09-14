@@ -121,7 +121,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/camera"
-                    android:tint="#FF6B6B" />
+                    app:tint="#FF6B6B" />
 
                 <TextView
                     android:id="@+id/messageInput"
@@ -142,7 +142,7 @@
                 android:layout_height="24dp"
                 android:src="@drawable/send"
                 android:layout_marginStart="12dp"
-                android:tint="#FF6B6B" />
+                app:tint="#FF6B6B" />
 
             <!-- More Options -->
             <ImageView
@@ -151,7 +151,7 @@
                 android:layout_height="24dp"
                 android:src="@drawable/more_vertical"
                 android:layout_marginStart="12dp"
-                android:tint="#FF6B6B" />
+                app:tint="#FF6B6B" />
 
         </LinearLayout>
 

@@ -103,8 +103,15 @@ class CameraActivity : AppCompatActivity() {
     }
 
     private fun takePhoto() {
-        Toast.makeText(this, "Photo captured!", Toast.LENGTH_SHORT).show()
-        // Here you would typically capture the photo and navigate to preview/edit screen
+        Toast.makeText(this, "Photo captured! Opening story creation...", Toast.LENGTH_SHORT).show()
+        try {
+            val intent = Intent(this, StoryCreationActivity::class.java)
+            startActivity(intent)
+            Log.d("CameraActivity", "Navigating to StoryCreationActivity")
+        } catch (e: Exception) {
+            Log.e("CameraActivity", "Error navigating to StoryCreationActivity: ${e.message}")
+            Toast.makeText(this, "Error opening story creation: ${e.message}", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun toggleFilters() {
