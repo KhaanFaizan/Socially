@@ -126,6 +126,7 @@
 
                 <!-- Story 1 -->
                 <LinearLayout
+                    android:id="@+id/story1Layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -171,6 +172,7 @@
 
                 <!-- Story 2 -->
                 <LinearLayout
+                    android:id="@+id/story2Layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -216,6 +218,7 @@
 
                 <!-- Story 3 -->
                 <LinearLayout
+                    android:id="@+id/story3Layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"

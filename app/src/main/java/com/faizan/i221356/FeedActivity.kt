@@ -77,6 +77,9 @@ class FeedActivity : AppCompatActivity() {
             Toast.makeText(this, "Messages icon not found!", Toast.LENGTH_SHORT).show()
         }
 
+        // Story click listeners
+        setupStoryClickListeners()
+
         // Bottom navigation items
         val homeIcon: ImageView = findViewById(R.id.homeIcon)
         homeIcon.setOnClickListener {
@@ -148,6 +151,41 @@ class FeedActivity : AppCompatActivity() {
         } else {
             Log.e("FeedActivity", "Profile icon not found!")
             Toast.makeText(this, "Profile icon not found!", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun setupStoryClickListeners() {
+        // Story 1 - karennne
+        val story1Layout: LinearLayout = findViewById(R.id.story1Layout)
+        story1Layout.setOnClickListener {
+            openStoryViewer("karennne", "2h", R.drawable.shutterstock_1011776404)
+        }
+
+        // Story 2 - zackjohn
+        val story2Layout: LinearLayout = findViewById(R.id.story2Layout)
+        story2Layout.setOnClickListener {
+            openStoryViewer("zackjohn", "4h", R.drawable.shutterstock_1033038292)
+        }
+
+        // Story 3 - kieron_d
+        val story3Layout: LinearLayout = findViewById(R.id.story3Layout)
+        story3Layout.setOnClickListener {
+            openStoryViewer("kieron_d", "6h", R.drawable.shutterstock_1068919502)
+        }
+    }
+
+    private fun openStoryViewer(username: String, timeAgo: String, storyImage: Int) {
+        Toast.makeText(this, "Opening story from $username", Toast.LENGTH_SHORT).show()
+        try {
+            val intent = Intent(this, StoryViewerActivity::class.java)
+            intent.putExtra("username", username)
+            intent.putExtra("timeAgo", timeAgo)
+            intent.putExtra("storyImage", storyImage)
+            startActivity(intent)
+            Log.d("FeedActivity", "Navigating to StoryViewerActivity for $username")
+        } catch (e: Exception) {
+            Log.e("FeedActivity", "Error navigating to StoryViewerActivity: ${e.message}")
+            Toast.makeText(this, "Error opening story: ${e.message}", Toast.LENGTH_LONG).show()
         }
     }
 }
