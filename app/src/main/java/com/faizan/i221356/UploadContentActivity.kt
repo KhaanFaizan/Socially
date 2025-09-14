@@ -170,23 +170,23 @@ class UploadContentActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.photoTabText).setTextColor(0x80FF8B4513.toInt())
         findViewById<TextView>(R.id.videoTabText).setTextColor(0x80FF8B4513.toInt())
         
-        findViewById<View>(R.id.libraryTabIndicator).visibility = android.view.View.INVISIBLE
-        findViewById<View>(R.id.photoTabIndicator).visibility = android.view.View.INVISIBLE
-        findViewById<View>(R.id.videoTabIndicator).visibility = android.view.View.INVISIBLE
+        findViewById<View>(R.id.libraryTabIndicator).visibility = View.INVISIBLE
+        findViewById<View>(R.id.photoTabIndicator).visibility = View.INVISIBLE
+        findViewById<View>(R.id.videoTabIndicator).visibility = View.INVISIBLE
 
         // Highlight selected tab
         when (selectedTab) {
             "library" -> {
                 findViewById<TextView>(R.id.libraryTabText).setTextColor(0xFFFF8B4513.toInt())
-                findViewById<View>(R.id.libraryTabIndicator).visibility = android.view.View.VISIBLE
+                findViewById<View>(R.id.libraryTabIndicator).visibility = View.VISIBLE
             }
             "photo" -> {
                 findViewById<TextView>(R.id.photoTabText).setTextColor(0xFFFF8B4513.toInt())
-                findViewById<View>(R.id.photoTabIndicator).visibility = android.view.View.VISIBLE
+                findViewById<View>(R.id.photoTabIndicator).visibility = View.VISIBLE
             }
             "video" -> {
                 findViewById<TextView>(R.id.videoTabText).setTextColor(0xFFFF8B4513.toInt())
-                findViewById<View>(R.id.videoTabIndicator).visibility = android.view.View.VISIBLE
+                findViewById<View>(R.id.videoTabIndicator).visibility = View.VISIBLE
             }
         }
     }
