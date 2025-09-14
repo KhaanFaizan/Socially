@@ -80,6 +80,7 @@
 
                 <!-- Your Story -->
                 <LinearLayout
+                    android:id="@+id/yourStoryLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"

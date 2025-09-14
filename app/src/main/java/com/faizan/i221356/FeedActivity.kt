@@ -25,9 +25,30 @@ class FeedActivity : AppCompatActivity() {
         // Camera icon in header
         val cameraIcon: ImageView = findViewById(R.id.cameraIcon)
         cameraIcon.setOnClickListener {
-            Toast.makeText(this, "Camera feature coming soon!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Opening camera!", Toast.LENGTH_SHORT).show()
+            try {
+                val intent = Intent(this, CameraActivity::class.java)
+                startActivity(intent)
+                Log.d("FeedActivity", "Navigating to CameraActivity")
+            } catch (e: Exception) {
+                Log.e("FeedActivity", "Error navigating to CameraActivity: ${e.message}")
+                Toast.makeText(this, "Error opening camera: ${e.message}", Toast.LENGTH_LONG).show()
+            }
         }
 
+        // Your Story section
+        val yourStoryLayout: LinearLayout = findViewById(R.id.yourStoryLayout)
+        yourStoryLayout.setOnClickListener {
+            Toast.makeText(this, "Opening camera for your story!", Toast.LENGTH_SHORT).show()
+            try {
+                val intent = Intent(this, CameraActivity::class.java)
+                startActivity(intent)
+                Log.d("FeedActivity", "Navigating to CameraActivity from Your Story")
+            } catch (e: Exception) {
+                Log.e("FeedActivity", "Error navigating to CameraActivity from Your Story: ${e.message}")
+                Toast.makeText(this, "Error opening camera: ${e.message}", Toast.LENGTH_LONG).show()
+            }
+        }
 
         // Reels icon in header
         val reelsIcon: ImageView = findViewById(R.id.reelsIcon)

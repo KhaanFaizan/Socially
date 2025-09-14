@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".CameraActivity">
+
+    <!-- Camera Preview Background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/shutterstock_1163329165"
+        android:scaleType="centerCrop" />
+
+    <!-- Top Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Close Button -->
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/close"
+            android:background="@drawable/circle_background"
+            android:padding="8dp"
+            android:contentDescription="Close camera" />
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Settings Button -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/options"
+            android:background="@drawable/circle_background"
+            android:padding="8dp"
+            android:contentDescription="Camera settings" />
+
+    </LinearLayout>
+
+    <!-- Bottom Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:paddingBottom="32dp">
+
+        <!-- Camera Modes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:id="@+id/typeMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:id="@+id/typeModeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TYPE"
+                    android:textSize="12sp"
+                    android:textColor="#80FFFFFF"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liveMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:id="@+id/liveModeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIVE"
+                    android:textSize="12sp"
+                    android:textColor="#80FFFFFF"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/normalMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:id="@+id/normalModeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NORMAL"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFFFF"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/boomerangMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:id="@+id/boomerangModeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BOOMERANG"
+                    android:textSize="12sp"
+                    android:textColor="#80FFFFFF"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/superzoomMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:id="@+id/superzoomModeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUPERZOOM"
+                    android:textSize="12sp"
+                    android:textColor="#80FFFFFF"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Bottom Control Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="24dp">
+
+            <!-- Gallery Thumbnail -->
+            <ImageView
+                android:id="@+id/galleryThumbnail"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/shutterstock_1163329165"
+                android:background="@drawable/circle_background"
+                android:scaleType="centerCrop"
+                android:contentDescription="Gallery thumbnail" />
+
+            <!-- Flash Button -->
+            <ImageView
+                android:id="@+id/flashButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/flash_off"
+                android:background="@drawable/circle_background"
+                android:padding="8dp"
+                android:layout_marginLeft="24dp"
+                android:contentDescription="Flash toggle" />
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Shutter Button -->
+            <ImageView
+                android:id="@+id/shutterButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/camera"
+                android:background="@drawable/shutter_button_background"
+                android:padding="20dp"
+                android:contentDescription="Take photo" />
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Camera Switch Button -->
+            <ImageView
+                android:id="@+id/cameraSwitchButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/camera_switch"
+                android:background="@drawable/circle_background"
+                android:padding="8dp"
+                android:layout_marginRight="24dp"
+                android:contentDescription="Switch camera" />
+
+            <!-- Filters Button -->
+            <ImageView
+                android:id="@+id/filtersButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/filters"
+                android:background="@drawable/circle_background"
+                android:padding="8dp"
+                android:contentDescription="Filters" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation Indicator -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="bottom"
+        android:background="#FF8B4513" />
+
+</FrameLayout>
